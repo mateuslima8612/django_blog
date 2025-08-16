@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}home{% endblock title %}
+{% block content %}
+<h2 class="ps-5">Latest Posts</h2>
+{% if posts %}
+    {% for post in posts|slice:":3" %}
+    <div class="post mb-4 p-3 border rounded">
+        <h3>{{ post.title }}</h3>
+        <span> {{ post.date }}</span>
+        <div class="post-content">
+            {{ post.content|truncatewords:30 }}
+        </div>
+    </div>
+    {% endfor %}
+{% else %}
+    <div class="m-5 alert alert-info">Nothing here yet... Why not make a new post?</div>
+{% endif %}
+{% endblock content %}
