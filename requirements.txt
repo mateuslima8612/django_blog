@@ -8,7 +8,7 @@
 # tzdata==2025.2
 # whitenoise==6.7.0
 Django==5.2.5
-psycopg[binary]==3.2.3          # ← modern way: one line instead of two
+psycopg[binary]==3.2.3          
 whitenoise==6.7.0
 python-dotenv==1.1.1
-gunicorn==23.0.0                 # ← strongly recommended for production
+gunicorn==23.0.0                 

@@ -28,9 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*','https://django-blog-chi.vercel.app/']
+ALLOWED_HOSTS = ['*','*.vercel.app/']
 
 if os.environ.get("DJANGO_PRODUCTION") or not DEBUG:
     SECURE_SSL_REDIRECT = True
