@@ -1,0 +1,13 @@
+{
+  "buildCommand": "pip install -r requirements.txt",
+  "outputDirectory": ".",
+  "framework": "python",
+  "projectSettings": {
+    "rootDirectory": "backend"
+  },
+  "functions": {
+    "api/index.py": {
+      "runtime": "python3.13"
+    }
+  }
+}
