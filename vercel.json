@@ -1,5 +1,4 @@
 {
-  "buildCommand": "pip install -r requirements.txt && python backend/manage.py collectstatic --noinput",
   "outputDirectory": ".",
   "framework": "python",
   "functions": {
