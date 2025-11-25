@@ -33,7 +33,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # SECURITY WARNING: don't run with debug turned on in production!
 if os.environ.get('VERCEL'):
     DEBUG = False
-    ALLOWED_HOSTS = ['.vercel.app', '.now.sh', 'localhost']
+    ALLOWED_HOSTS = ['.vercel.app', '.now.sh', 'localhost', 'blog.mateuso.dev']
 else:
     DEBUG = True
     ALLOWED_HOSTS = []
