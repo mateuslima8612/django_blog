@@ -153,6 +153,23 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
     os.path.join(BASE_DIR, 'blog/static'),
 ]
+
+if os.environ.get('VERCEL'):
+    print(f"=== VERCEL STATIC FILES DEBUG ===")
+    print(f"STATIC_ROOT: {STATIC_ROOT}")
+    print(f"BASE_DIR: {BASE_DIR}")
+    
+    if os.path.exists(STATIC_ROOT):
+        print(f"Static files directory exists: {STATIC_ROOT}")
+        admin_static = os.path.join(STATIC_ROOT, 'admin')
+        if os.path.exists(admin_static):
+            print(f"Admin static files found: {os.listdir(admin_static)}")
+        else:
+            print("Admin static files NOT found!")
+    else:
+        print(f"Static files directory does NOT exist: {STATIC_ROOT}")
+    print("==================================")
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
