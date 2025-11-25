@@ -27,10 +27,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("SECRET_KEY")
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = ['*','*.vercel.app/']
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# SECURITY WARNING: don't run with debug turned on in production!
+if os.environ.get('VERCEL'):
+    DEBUG = False
+    ALLOWED_HOSTS = ['.vercel.app', '.now.sh', 'localhost']
+else:
+    DEBUG = True
+    ALLOWED_HOSTS = []
 
 if os.environ.get("DJANGO_PRODUCTION") or not DEBUG:
     SECURE_SSL_REDIRECT = True
@@ -139,11 +145,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'blog/static'),
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # ensure BASE_DIR exists in this file
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

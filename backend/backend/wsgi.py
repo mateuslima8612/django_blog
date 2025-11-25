@@ -6,10 +6,8 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
 
 application = get_wsgi_application()
 
-# WhiteNoise configuration
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-application = WhiteNoise(application, root=STATIC_ROOT)
+# WhiteNoise configuration for static files
+application = WhiteNoise(application, root="staticfiles")
 
-# Vercel requires this
+# For Vercel
 app = application
