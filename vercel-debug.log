@@ -1,0 +1,20 @@
+> [debug] [2025-11-25T03:48:36.718Z] Found config in file "/home/mateusdesktop/code/python/django_blog/vercel.json"
+Vercel CLI 48.10.11
+> [debug] [2025-11-25T03:48:36.723Z] user supplied known subcommand: "build"
+> [debug] [2025-11-25T03:48:36.834Z] Found ".git/config" - detected "/home/mateusdesktop/code/python/django_blog" as repo root
+WARN! Build not running on Vercel. System environment variables will not be available.
+> [debug] [2025-11-25T03:48:36.846Z] Failed loading environment variables: Error: ENOENT: no such file or directory, open '/home/mateusdesktop/code/python/django_blog/.vercel/.env.preview.local'
+> [debug] [2025-11-25T03:48:36.870Z] Locating files /home/mateusdesktop/code/python/django_blog
+> [debug] [2025-11-25T03:48:36.872Z] Ignoring /home/mateusdesktop/code/python/django_blog/.git
+> [debug] [2025-11-25T03:48:36.873Z] Ignoring /home/mateusdesktop/code/python/django_blog/.gitignore
+> [debug] [2025-11-25T03:48:36.873Z] Ignoring /home/mateusdesktop/code/python/django_blog/.vercel
+> [debug] [2025-11-25T03:48:36.873Z] Ignoring /home/mateusdesktop/code/python/django_blog/venv
+> [debug] [2025-11-25T03:48:36.874Z] Ignoring /home/mateusdesktop/code/python/django_blog/backend/backend/__pycache__
+> [debug] [2025-11-25T03:48:36.874Z] Ignoring /home/mateusdesktop/code/python/django_blog/backend/blog/__pycache__
+> [debug] [2025-11-25T03:48:36.875Z] Ignoring /home/mateusdesktop/code/python/django_blog/backend/blog/migrations/__pycache__
+> [debug] [2025-11-25T03:48:36.879Z] Locating files /home/mateusdesktop/code/python/django_blog [9ms]
+Error: Function Runtimes must have a valid version, for example `now-php@1.0.0`.
+> [debug] [2025-11-25T03:48:37.277Z] Vercel CLI 48.10.11
+
+> [debug] [2025-11-25T03:48:38.890Z] Telemetry subprocess killed due to timeout
+> [debug] [2025-11-25T03:48:38.902Z] Telemetry subprocess exited with code null
