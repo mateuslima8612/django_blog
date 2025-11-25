@@ -1,13 +1,10 @@
 {
-  "buildCommand": "pip install -r requirements.txt",
+  "buildCommand": "pip install -r requirements.txt && python backend/manage.py collectstatic --noinput",
   "outputDirectory": ".",
   "framework": "python",
-  "projectSettings": {
-    "rootDirectory": "backend"
-  },
   "functions": {
     "api/index.py": {
-      "runtime": "python3.13"
+      "runtime": "python3.11"
     }
   }
 }
